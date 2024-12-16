@@ -1,0 +1,11 @@
+.DS_Store
+node_modules
+/build
+/.svelte-kit
+/package
+!.env.example
+.vercel
+.output
+
+!src/lib/components/icon
+!src/stories/components/icon

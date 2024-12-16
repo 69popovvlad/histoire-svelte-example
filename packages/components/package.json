@@ -1,0 +1,61 @@
+{
+  "name": "components",
+  "version": "1.0.0",
+  "private": "true",
+  "type": "module",
+  "homepage": "https://username.github.io/repository-name/components",
+  "scripts": {
+    "package": "svelte-package --input \"$SRC_DIR\"",
+    "story:dev": "histoire dev",
+    "story:build": "histoire build",
+    "story:preview": "histoire preview",
+    "gen:exports": "svelte-lib-helpers exports --root src/lib",
+    "gen:docs": "svelte-lib-helpers docs",
+    "gen:compo-data": "svelte-lib-helpers compo-data",
+    "copy:package": "svelte-lib-helpers package",
+    "build:__internal": "pnpm gen:docs && pnpm package && pnpm gen:exports && pnpm publint",
+    "build:components": "cross-env SRC_DIR=src/lib/components pnpm build:__internal",
+    "build": "pnpm vite build && pnpm build:components"
+  },
+  "peerDependencies": {
+    "@tailwindcss/forms": "0.5.6",
+    "flowbite-svelte": "0.44.22",
+    "flowbite": "2.2.1",
+    "svelte": "4.2.2",
+    "tailwindcss": "3.3.2"
+  },
+  "devDependencies": {
+    "@histoire/plugin-svelte": "0.17.9",
+    "@sveltejs/kit": "2.5.0",
+    "@sveltejs/package": "2.2.6",
+    "@sveltejs/vite-plugin-svelte": "3.0.2",
+    "@trivago/prettier-plugin-sort-imports": "4.2.0",
+    "cross-env": "7.0.3",
+    "histoire": "0.17.9",
+    "postcss": "8.4.33",
+    "prettier": "3.2.5",
+    "prettier-plugin-svelte": "3.1.2",
+    "prettier-plugin-tailwindcss": "0.5.4",
+    "publint": "0.2.7",
+    "start-server-and-test": "1.15.4",
+    "svelte-lib-helpers": "0.3.15",
+    "svelte-preprocess": "5.1.3",
+    "typescript": "5.0.4",
+    "vite": "5.0.3"
+  },
+  "files": [
+    "dist"
+  ],
+  "types": "./dist/index.d.ts",
+  "svelte": "./dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "svelte": "./dist/index.js"
+    },
+    "./ButtonWide.svelte": {
+      "types": "./dist/button/ButtonWide.svelte.d.ts",
+      "svelte": "./dist/button/ButtonWide.svelte"
+    }
+  }
+}

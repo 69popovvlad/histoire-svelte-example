@@ -1,0 +1,11 @@
+button:disabled,
+button[disabled] {
+  & p,
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5 {
+    @apply opacity-20;
+  }
+}

@@ -1,0 +1,46 @@
+@import './buttons.css';
+@import './text.css';
+
+@layer base {
+  :root {
+    --color-dark-200: 35, 38, 39;
+    --color-dark-700: 27, 30, 32;
+    --color-dark-900: 30, 30, 30;
+
+    --color-yellow-700: 255, 214, 0;
+    --color-yellow-900: 255, 138, 0;
+
+    --color-primary: 218, 65, 103;
+
+    /* oklch colors generated using https://uicolors.app/create */
+    --color-primary-50: 96.57% 0.02 289.61;
+    --color-primary-100: 93.87% 0.03 287.79;
+    --color-primary-200: 88.46% 0.06 286.19;
+    --color-primary-300: 79.41% 0.11 287.14;
+    --color-primary-400: 68.46% 0.17 286.06;
+    --color-primary-500: 56.56% 0.25 282.55;
+    --color-primary-600: 51.22% 0.27 281.79;
+    --color-primary-700: 46.48% 0.26 280.59;
+    --color-primary-800: 40.87% 0.23 280.52;
+    --color-primary-900: 35.87% 0.19 281.88;
+    --color-primary-950: 26.86% 0.15 280.06;
+
+    --color-main: 30, 30, 30;
+    --color-empty: 44, 44, 44;
+    --color-popup: 32, 35, 37;
+    --color-input-border: 48, 52, 55;
+    --color-pink-gradient: 255, 0, 123;
+    --color-blue-gradient: 0, 161, 255;
+    --color-purple-base: 107, 78, 255;
+    --color-purple-base-light: 153, 144, 255;
+    --color-purple-base-dark: 64, 54, 117;
+    --color-purple-dark: 36, 39, 72;
+    --color-warning-info: 255, 82, 71;
+    --color-disabled-text: 153, 146, 192;
+  }
+
+  svg [fill='#68e1fd'],
+  svg [stroke='#68e1fd'] {
+    @apply fill-primary;
+  }
+}

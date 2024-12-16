@@ -1,0 +1,19 @@
+{
+  "private": "true",
+  "scripts": {
+    "components:build": "cd packages/components/ && pnpm build",
+    "components:lint": "cd packages/components/ && pnpm lint",
+    "components:format": "cd packages/components/ && pnpm format",
+
+    "web:build": "cd packages/web/ && pnpm build",
+    "web:build:dev": "cd packages/web/ && pnpm build:dev",
+    "web:lint": "cd packages/web/ && pnpm lint",
+    "web:format": "cd packages/web/ && pnpm format",
+
+    "build": "pnpm components:build && pnpm web:build",
+    "build:dev": "pnpm components:build && pnpm web:build:dev"
+  },
+  "engines": {
+    "pnpm": ">=8.0.0"
+  }
+}
